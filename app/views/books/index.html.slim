@@ -1,0 +1,26 @@
+nav.light-blue.darken-3
+  .container
+    .row
+      .nav-wrapper
+        form
+          .input-field
+            input#search required="" type="search" ng-model="query" placeholder="Поиск"
+            label for="search"
+              i.fi-page-search
+
+.container
+  .row
+    .col.s12.m12.l12
+      h4 Всего книг в картотеке - {{books.length}}
+  .row
+    .books-list ng-repeat=("book in books | filter:query")
+      .col.s6.m4.l3
+        .card.small
+          .card-image
+            img ng-src="{{book.image}}"
+            span.card-title {{book.title}}
+          .card-content
+            p {{book.about}}
+          .card-action
+            a href="#" Редактировать
+            a href="#" Удалить
