@@ -65,6 +65,8 @@ end
 group :production do
   gem 'pg'
   gem 'unicorn'
+  gem 'rails_serve_static_assets'
+  gem 'rails_stdout_logging'
 end
 
 # To use ActiveModel has_secure_password
