@@ -12,10 +12,11 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
 
     respond_to do |format|
-      format.html { redirect_to books_url }
       if @book.save
+        format.html { redirect_to books_url }
         format.json { render nothing: true, status: :ok }
       else
+        format.html { redirect_to books_url }
         format.json { render nothing: true, status: :unprocessable_entity }
       end
     end
@@ -24,8 +25,10 @@ class BooksController < ApplicationController
   def update
     respond_to do |format|
       if @book.update(book_params)
+        format.html { redirect_to books_url }
         format.json { render nothing: true, status: :ok }
       else
+        format.html { redirect_to books_url }
         format.json { render nothing: true, status: :unprocessable_entity }
       end
     end
@@ -33,10 +36,11 @@ class BooksController < ApplicationController
 
   def destroy
     respond_to do |format|
-      format.html { redirect_to books_url }
       if @book.destroy
+        format.html { redirect_to books_url }
         format.json { render nothing: true, status: :ok }
       else
+        format.html { redirect_to books_url }
         format.json { render nothing: true, status: :unprocessable_entity }
       end
     end

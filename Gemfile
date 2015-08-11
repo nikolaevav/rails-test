@@ -60,6 +60,9 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+  gem 'simplecov', require: false
+  gem 'simplecov-rcov', require: false
+  gem "spork-rails"
 end
 
 group :production do
