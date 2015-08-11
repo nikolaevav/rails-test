@@ -1,0 +1,21 @@
+nav.light-blue.darken-3
+  .container
+    .nav-wrapper
+      a.brand-logo href="#/" Форма добавления новой книги
+
+.container
+  .row
+  .row
+    a.btn.btn-large.right.light-blue.darken-3 href="#/" Назад
+  .row
+    form accept-charset="UTF-8" action="/books" enctype="multipart/form-data" method="post"
+      .col.s12.m8.l8
+        .input-field
+          input#title.validate.characterCounter type="text" ng-model="title" length="80" maxlength="80" name="book[title]"
+          label for="title" Введите название книги
+        .input-field
+          textarea#about.materialize-textarea.characterCounter ng-model="about" length="140" maxlength="140" name="book[about]"
+          label for="about" Описание книги
+        .input-field
+          input#image.materialize-textarea ng-model="image" type="file" file="image" name="book[image]"
+        button.btn.btn-large.right type="submit"  Сохранить

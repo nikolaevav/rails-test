@@ -13,5 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require materialize-sprockets
-//= require angular/controllers
+//= require angular
+//= require angular-route
+//= require angular-resource
+//= require angular-rails-templates
+//= require angularjs-file-upload
+//= require angular-app/app
+//= require angular-app/controllers
+//= require angular-app/services
+
 //= require main
+
+//= require_tree ./templates

@@ -7,5 +7,4 @@ class Book < ActiveRecord::Base
   auto_html_for :about do
     simple_format
   end
-
 end

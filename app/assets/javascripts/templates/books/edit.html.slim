@@ -1,0 +1,27 @@
+nav.light-blue.darken-3
+  .container
+    .nav-wrapper
+      a.brand-logo href="#/" Форма редактирования книги
+
+.container
+  .row
+  .row
+    h4 {{book.title}}
+  .row
+    a.btn.btn-large.right.light-blue.darken-3 href="#/" К списку
+  .row
+    form enctype="multipart/form-data" name="form" ng-submit="submit()" novalidate=""
+      .col.s12.m8.l8
+        .input-field ng-class="errorClass('title')"
+          label.control-label for="title"  Введите название книги
+          input autofocus="" name="title" ng-model="book.title" required="" type="text" length="140" maxlength="140"
+        .input-field ng-class="errorClass('about')"
+          label.control-label for="about"  Описание книги
+          textarea.materialize-textarea.characterCounter name="about" ng-model="book.about" required="" type="text" length="140" maxlength="140"
+        .input-field
+          input type="file" nv-file-select="" uploader="uploader" ng-model="book.image"
+
+      .col.s12.m4.l4
+        a.btn ng-click="cancel()" Отмена
+        button.btn.btn-success type="submit" Сохранить
+

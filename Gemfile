@@ -2,16 +2,21 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.3'
 gem 'slim-rails'
-gem 'sqlite3'
 gem 'simple_form'
 gem 'carrierwave'
 gem 'mini_magick'
 gem "auto_html"
 gem 'jquery-rails'
+gem 'jbuilder'
 
 gem 'materialize-sass'
 gem 'foundation-icons-sass-rails'
 gem "autoprefixer-rails"
+
+gem 'angularjs-rails'
+gem 'angular-rails-templates'
+
+gem 'angularjs-file-upload-rails', '~> 1.1.6'
 
 # Gems used only for assets and not required
 # in production environments by default.

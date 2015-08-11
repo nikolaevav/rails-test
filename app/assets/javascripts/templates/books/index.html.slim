@@ -1,0 +1,35 @@
+nav.light-blue.darken-3
+  .container
+    .row
+      .nav-wrapper
+        form
+          .input-field
+            input#search required="" type="search" ng-model="query" placeholder="Поиск"
+            label for="search"
+              i.fi-page-search
+
+.container
+  .row
+    .col.s12.m6.l6
+      h4 Всего книг в картотеке - {{books.length}}
+    .col.s12.m6.l6
+      br
+      a.btn.right.light-blue.darken-3 href="#/books/new" Добавить книгу
+  .row
+    .books-list ng-repeat=("book in books | filter:query") id="book_{{book.id}}"
+      .col.s6.m4.l3
+        .card.medium
+          a href="#/books/{{book.id}}"
+            .card-image
+              img ng-src="{{book.image}}" src=""
+              span.card-title {{book.title}}
+          .card-content
+            .card-data.grey-text.text-darken-1 {{book.created_at}}
+            .card-description {{book.about}}
+
+          .card-action
+            a href="#/books/{{book.id}}" Карточка
+            a href="#/books/{{book.id}}/edit"
+              i.fi-pencil
+            a href="" ng-click="destroy(book.id)" data-confirm='Удалить?'
+              i.fi-trash

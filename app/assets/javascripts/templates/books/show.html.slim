@@ -1,0 +1,19 @@
+nav.light-blue.darken-3
+  .container
+    .nav-wrapper
+      a.brand-logo href="#/" Карточка книги
+
+.container
+  .row
+  .row
+    a.btn.btn-large.right.light-blue.darken-3 href="#/" К списку
+  .row
+    .col.s12.m5.l5
+      img ng-src="{{book.image}}"
+    .col.s12.m7.l7
+      h4 {{book.title}}
+      .book-about {{book.about}}
+
+  .row
+    .col.s12
+      a.btn.right href="#/books/{{book.id}}/edit" Редактировать

@@ -3,9 +3,9 @@ html ng-app="booksApp"
   head
     title= content_for?(:title) ? yield(:title) : "Тестовое задание список книг"
     = stylesheet_link_tag    "application", media: "all"
-    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  body ng-controller="BookListCtrl"
-    = yield
+  body
+    main ng-view=""
+      = yield
 
